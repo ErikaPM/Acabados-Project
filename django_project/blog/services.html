@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+    <div class ="services-container">
+        <div class = "main-container-category">
+            <div class = "balcony-title">
+                <h1 class = "balcony-title-category main-title-color main-title-style big-font">Servicios </h1>
+            </div>
+            <div class = "container-category container-separation">
+                {% for post in posts %}   
+                <div class ="container-category-item">
+                    <h1 class ="category-title main-font-style"> {{post.titulo}} </h1>
+                    <p> {{post.autor}} </p>
+                    <p> {{post.fecha}} </p>
+                    <p> {{post.contenido}} </p>
+                </div>
+            {% endfor %}
+            </div>
+            <div class = "container-category container-separation">
+                {% for post in posts %}   
+                <div class ="container-category-item">
+                    <h1 class ="category-title main-font-style"> {{post.titulo}} </h1>
+                    <p> {{post.autor}} </p>
+                    <p> {{post.fecha}} </p>
+                    <p> {{post.contenido}} </p>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        <div class= "main-container-contactbox">
+            <div class= "container-contactbox">
+                <div class= "contactbox">
+                    <a href="https://web.whatsapp.com/" class="socialIcons-module-wsp-icon" target="_blank" rel="noreferrer noopener">
+                    <a href="https://web.whatsapp.com/" class="socialIcons-module-wsp-icon" target="_blank" rel="noreferrer noopener">
+                        <i class="fab fa-whatsapp icon-style"></i>
+                        <p class="main-font-style light-color">Contáctanos vía Whatsapp aquí</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock content %}

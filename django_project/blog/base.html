@@ -1,0 +1,94 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="{% static 'blog/main.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    {% if title %}
+    <title> Django blog - {{title}} </title>
+    {% else %}
+    <title> Django blog </title>
+    {% endif %}
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand logo-site" href="{% url 'blog-home' %}">Alex Remodela</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link main-font-style" href="{% url 'blog-services' %}">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link main-font-style" href="{% url 'blog-about' %}">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Presupuesto
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'blog-quotes' %}">Cotización</a></li>
+                <li><a class="dropdown-item" href="{% url 'blog-calculator' %}">Calculadora</a></li>
+                </ul>
+            </li>
+            </ul>
+            <form class="user-buttons-nav">
+                <p><i class="fa fa-user"></i> User</p>
+                <button class="btn btn-outline-success me-2" type="button">Iniciar sesión</button>
+                <button class="btn btn-outline-secondary" type="button">Registrarse</button>
+            </form>
+        </div>
+        </div>
+</nav>
+        <main role = "main" class = "container" >
+            <div class= "row">
+                <div class="section-content"> {% block content %} {% endblock content %} </div>
+            </div>
+        </main>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+    <footer class="bd-footer p-3 p-md-5 mt-5 text-center text-sm-start"> 
+        <ul class="social-icon-list">
+            <li class="socialIcons-module">
+                <a href="https://co.pinterest.com/" class="socialIcons-module-face-icon" target="_blank" rel="noreferrer noopener">
+                    <i class="fab fa-facebook icon-style"></i>
+                </a>
+            </li>
+            <li class="socialIcons-module">
+                <a href="https://web.whatsapp.com/" class="socialIcons-module-wsp-icon" target="_blank" rel="noreferrer noopener">
+                    <i class="fab fa-whatsapp icon-style"></i>
+                </a>
+            </li>
+            <li class="socialIcons-module">
+                <a href="https://www.youtube.com/" class="socialIcons-module-youtube-icon" target="_blank" rel="noreferrer noopener">
+                    <i class="fab fa-youtube icon-style"></i>
+                </a>
+            </li>
+        </ul>
+            <p class="copy-text main-font-style"> Copyright @2021 - Bogotá, Colombia</p>
+        </footer>
+</body>
+</html>

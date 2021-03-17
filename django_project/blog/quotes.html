@@ -1,0 +1,85 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div>
+    <h1 class = "main-title-color main-title-style big-font">Realiza tu Cotización aquí:</h1>
+        <div class = "main-container-quotes">
+            <form>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Nombre :</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Correo electrónico :</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputPassword6" class="col-form-label">Celular :</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    </div>
+                    <p>
+                        <label for="select" class="col-auto">Tipo de inmueble :</label>
+                        <select id="select">
+                            <option value>Selecciona...</option>
+                            <option value>Apartamento</option>
+                            <option value>Casa</option>
+                            <option value>Otro</option>
+                        </select>
+                    </p>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="inputPassword6" class="col-form-label">Área del inmueble :</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                        </div>
+                    </div>
+                    <p>
+                        Remodelación total (check)
+                        -lista de areas para remodelacion (baños,cocinas, pisos, techos )
+                        - materiales (cuando sean pisos; tableta, porcelanato, piso laminado, fachaletas, pizarras)
+                        -paredes (Areas a pintar o remodelar)
+                        -fotos de las zonas a remodelar (adjuntos)
+                        
+                    </p>
+                    <p>
+                        <label for="select" class="col-auto">Areas a remodelar :</label>
+                        <select id="select">
+                            <option value>Selecciona...</option>
+                            <option value>Apartamento</option>
+                            <option value>Casa</option>
+                            <option value>Otro</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="textarea" class="col-auto">Describa su requerimiento:</label>
+                        <textarea id="textarea" cols="32" rows="10"></textarea>
+                    </p>
+                    <p>
+                        <label for="date" class="col-auto">Fecha estimada de inicio del proyecto:</label>
+                        <input type="date" id="date"></input>
+                    </p>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+</div>
+
+
+
+
+{% endblock content %}
+
